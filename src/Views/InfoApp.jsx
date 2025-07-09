@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FAF5E5',
-    padding: 20
+    paddingTop: 20
   }
 });
 

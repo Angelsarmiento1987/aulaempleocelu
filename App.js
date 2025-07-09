@@ -1,7 +1,9 @@
-import { StatusBar } from 'react-native';
+
 import { StyleSheet, Text, View } from 'react-native';
 import 'react-native-gesture-handler';
 import { Routes } from './src/Routes/Routes';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 
 export default function App() {
@@ -9,14 +11,10 @@ export default function App() {
 
 
     <>
-
-      <StatusBar
-       backgroundColor="#044347" // fondo de la barra en Android
-        barStyle="light-content" // color del texto: "dark-content" o "light-content"
-      
-      />
+  <SafeAreaProvider>
+    <StatusBar barStyle="dark-content"  backgroundColor="#044347" />
       <Routes/>
-    
+    </SafeAreaProvider>
     </>
    
    
