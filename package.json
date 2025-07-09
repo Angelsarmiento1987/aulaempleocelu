@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "postinstall": "node -v && npm -v"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
@@ -31,6 +32,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=7"
   },
   "private": true
 }
