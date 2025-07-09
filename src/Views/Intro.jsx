@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center', // centra verticalmente
     alignItems: 'center',     // centra horizontalmente
-    backgroundColor: '#fff',
+    backgroundColor: '#FAF5E5',
   },
   title: {
     marginTop: 20,
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#333',
+    color: '#044347',
   },
 });
 

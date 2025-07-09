@@ -6,7 +6,15 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 
+// Deshabilitar escalado de fuente global
+if (Text.defaultProps == null) {
+  Text.defaultProps = {};
+}
+Text.defaultProps.allowFontScaling = false;
+
 export default function App() {
+
+  
   return (
 
 

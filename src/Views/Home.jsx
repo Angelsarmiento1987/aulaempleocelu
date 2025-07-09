@@ -23,6 +23,8 @@ import {
   AdEventType
 } from 'react-native-google-mobile-ads';
 
+
+
 // 🔸 ID de prueba o real
 const adUnitId = 'ca-app-pub-3911732855535272/9172587866';
 
@@ -138,10 +140,10 @@ const Home = () => {
       <TouchableOpacity onPress={() => openModal(item.image_url)}>
         <Image source={{ uri: item.image_url }} style={styles.image} />
       </TouchableOpacity>
-      <Text style={styles.info}>
+      <Text allowFontScaling={false} style={styles.info}>
         {item.asignatura} - {item.ubicacion}
       </Text>
-      <Text style={styles.date}>
+      <Text allowFontScaling={false} style={styles.date}>
         Publicado: {new Date(item.created_at).toLocaleDateString()}
       </Text>
     </View>
@@ -153,7 +155,7 @@ const Home = () => {
         <Image source={require('../Img/logo.png')} style={styles.logo} resizeMode="contain" />
       </View>
 
-      <Text style={styles.label}>Zona</Text>
+      <Text allowFontScaling={false}  style={styles.label}>Zona</Text>
       <View style={styles.zonasContainer}>
         {zonas.map((zona) => (
           <TouchableOpacity
@@ -165,6 +167,7 @@ const Home = () => {
             onPress={() => setZonaSeleccionada(zona.key)}
           >
             <Text
+            allowFontScaling={false}
               style={[
                 styles.zonaButtonText,
                 zonaSeleccionada === zona.key && styles.zonaButtonTextSelected
@@ -178,7 +181,7 @@ const Home = () => {
 
       {zonaSeleccionada && (
         <>
-          <Text style={styles.label}>Ubicación</Text>
+          <Text allowFontScaling={false} style={styles.label}>Ubicación</Text>
           <DropDownPicker
             open={openUbicacion}
             value={ubicacion}
@@ -191,9 +194,10 @@ const Home = () => {
             dropDownContainerStyle={styles.dropdownContainer}
             zIndex={2000}
             zIndexInverse={2000}
+       
           />
 
-          <Text style={styles.label}>Asignatura</Text>
+          <Text allowFontScaling={false} style={styles.label}>Asignatura</Text>
           <DropDownPicker
             open={openAsignatura}
             value={asignatura}
@@ -206,6 +210,7 @@ const Home = () => {
             dropDownContainerStyle={styles.dropdownContainer}
             zIndex={1000}
             zIndexInverse={3000}
+            
           />
         </>
       )}
